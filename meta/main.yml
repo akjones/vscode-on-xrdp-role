@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Andrew Jones
+  description: A role that installs Microsoft Visual Studio code, intended to run in an xrdp environment
+
+  license: GPLv3
+
+  min_ansible_version: 1.2
+
+  # platforms:
+  # - name: Ubuntu
+
+  galaxy_tags:
+    - vscode
+    - ubuntu
+    - xrdp
+
+dependencies: []
