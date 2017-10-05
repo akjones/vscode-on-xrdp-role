@@ -25,7 +25,7 @@
     dest: /usr/share/code/libxcb.so.1.1.0
 
 - name: create link
-  copy:
+  file:
     src: /usr/share/code/libxcb.so.1.1.0
     dest: /usr/share/code/libxcb.so.1
     state: link
