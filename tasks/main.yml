@@ -21,17 +21,9 @@
 
 - name: copy libs
   copy:
-    src: /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
-    dest: /usr/share/code/libxcb.so.1.1.0
-
-- name: create link
-  file:
-    src: /usr/share/code/libxcb.so.1.1.0
+    src: /usr/lib/x86_64-linux-gnu/libxcb.so.1
     dest: /usr/share/code/libxcb.so.1
-    state: link
 
 - name: fix libs
-  lineinfile:
-    path: /usr/share/code/libxcb.so.1.1.0
-    regexp: "BIG-REQUESTS"
-    line: "_IG-REQUESTS"
+  become: yes
+  command: sed -i 's/BIG-REQUESTS/_IG-REQUESTS/' /usr/share/code/libxcb.so.1
